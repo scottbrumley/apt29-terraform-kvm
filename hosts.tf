@@ -2,10 +2,11 @@
 resource "libvirt_volume" "ubuntu22-04-qcow2" {
   name = "ubuntu22.04.qcow2"
   pool = "default" # List storage pools using virsh pool-list
+
   #source = "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
-  #source = "./CentOS-7-x86_64-GenericCloud.qcow2"
-  source = "https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img"
-  #source = "/mnt/lab/images/ubuntu22.04.qcow2"
+  #source = "https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img"
+
+  source = "/mnt/lab/images/noble-server-cloudimg-amd64.img"
   format = "qcow2"
 }
 
